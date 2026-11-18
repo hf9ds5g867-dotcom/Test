@@ -50,11 +50,21 @@ curl -L -X POST 'https://www.googleapis.com/oauth2/v4/token' \
 
 ## 2. Start Homebridge
 
+On the UGREEN DXP8800 (UGOS Pro):
+
+1. App Center → install **Docker**.
+2. Files → create the folder `docker/homebridge` on a shared volume and upload
+   `docker-compose.yml` into it.
+3. Docker → Project → Create → name it `homebridge`, select that folder, and
+   use the existing compose file → Deploy.
+
+Or over SSH (Control Panel → Terminal → enable SSH), from that folder:
+
 ```sh
-docker compose up -d
+sudo docker compose up -d
 ```
 
-Open `http://<host-ip>:8581` and create the admin user.
+Open `http://<nas-ip>:8581` and create the admin user.
 
 ## 3. Install and configure the plugin
 

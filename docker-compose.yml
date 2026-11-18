@@ -1,0 +1,12 @@
+# Homebridge: bridges the Nest Thermostat E into Apple HomeKit.
+# Must run on an always-on Linux host on the same LAN as your Apple home hub.
+services:
+  homebridge:
+    image: homebridge/homebridge:latest
+    container_name: homebridge
+    restart: unless-stopped
+    network_mode: host # required: HomeKit discovery uses mDNS
+    environment:
+      - TZ=America/Los_Angeles
+    volumes:
+      - ./homebridge:/homebridge # config + pairing state; gitignored, holds secrets

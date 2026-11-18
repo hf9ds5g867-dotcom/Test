@@ -1,0 +1,9 @@
+{
+  "platform": "homebridge-google-nest-sdm",
+  "clientId": "YOUR_OAUTH_CLIENT_ID.apps.googleusercontent.com",
+  "clientSecret": "YOUR_OAUTH_CLIENT_SECRET",
+  "projectId": "YOUR_DEVICE_ACCESS_PROJECT_ID",
+  "refreshToken": "YOUR_REFRESH_TOKEN",
+  "subscriptionId": "projects/YOUR_GCP_PROJECT_ID/subscriptions/YOUR_SUBSCRIPTION_ID",
+  "gcpProjectId": "YOUR_GCP_PROJECT_ID"
+}
